@@ -21,7 +21,6 @@ public class Driver2 {
         sc.useLocale(Locale.US);
         Map<String, Account> akun = new HashMap<>();
 
-    while(true){
         String command = sc.nextLine();
         if(command.equals("create-account")){
             String owner = sc.nextLine();
@@ -42,9 +41,8 @@ public class Driver2 {
             System.out.println(create.toString());
         }
         else{
-            break;
+            System.out.println("Invalid command");
         }
-    }
     sc.close();
     }
 
