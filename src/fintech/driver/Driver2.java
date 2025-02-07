@@ -27,8 +27,11 @@ public class Driver2 {
             String accountname = sc.nextLine();
             Account create = new Account (owner, accountname);
             akun.put(accountname, create);
+            System.out.println(create.toString());
         }
-        else if(command.equals("create-transaction")){
+
+        command = sc.nextLine();
+        if(command.equals("create-transaction")){
             String accountname = sc.nextLine();
             Account account = akun.get(accountname);
             Double amount = sc.nextDouble();
@@ -37,7 +40,6 @@ public class Driver2 {
             String note = sc.nextLine();
             Transaction create = new Transaction(account, amount, postedat, note);
             create.sumamount(amount);
-            System.out.println(create.toString());
             System.out.println(create.toString());
         }
         else{
