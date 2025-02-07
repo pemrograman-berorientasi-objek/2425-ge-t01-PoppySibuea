@@ -28,7 +28,6 @@ public class Driver2 {
             String accountname = sc.nextLine();
             Account create = new Account (owner, accountname);
             akun.put(accountname, create);
-            System.out.println(create.toString());
         }
         else if(command.equals("create-transaction")){
             String accountname = sc.nextLine();
@@ -40,9 +39,9 @@ public class Driver2 {
             Transaction create = new Transaction(account, amount, postedat, note);
             create.sumamount(amount);
             System.out.println(create.toString());
+            System.out.println(create.toString());
         }
         else{
-            System.out.println("Invalid command");
             break;
         }
     }
